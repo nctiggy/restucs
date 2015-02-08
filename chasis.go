@@ -6,4 +6,4 @@ type Chasis struct {
 
 }
 
-type ChasisList []Chasis
+type Chasislist []Chasis
