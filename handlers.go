@@ -20,6 +20,9 @@ func ChasisIndex(w http.ResponseWriter, r *http.Request) {
 		Chasis{Name: "Chasis2"},
 	}
 
+	w.Header().Set("Content-Type", "application/json;charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
+
 	if err := json.NewEncoder(w).Encode(chasislist); err != nil {
 		panic(err)
 	}
